@@ -16,7 +16,7 @@
 # Necessary to use `||` logical operator.
 set unstable := true
 
-terraform_dir := justfile_dir() + "/terraform"
+terraform_dir := justfile_dir() + "/terraform/"
 default_plan_list := shell("ls -d -- $1/*", terraform_dir)
 
 [private]
