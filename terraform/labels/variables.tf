@@ -42,11 +42,6 @@ variable "label" {
       description = "Component: Terraform/OpenTofu"
     },
     {
-      name        = "cannot reproduce"
-      color       = "8c9a99"
-      description = "Cannot reproduce this issue"
-    },
-    {
       name        = "cleanup"
       color       = "16cc3b"
       description = "This pull request cleans up the project and introduces no functional changes"
