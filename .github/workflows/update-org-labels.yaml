@@ -1,0 +1,42 @@
+# Copyright 2025 Canonical Ltd.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+name: Update Charmed HPC organization labels
+on:
+  workflow_call:
+  push:
+    branches:
+      - main
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci.yaml
+
+  update-org-labels:
+    name: Update Charmed HPC organization labels
+    needs:
+      - ci
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install `opentofu`
+        run: sudo snap install opentofu --classic
+      - name: Install `just`
+        uses: extractions/setup-just@v2
+        with:
+          just-version: 1.38.0
+      - name: Update organization labels
+        run: |
+          CHARMED_HPC_ORG_PAT="${{ secrets.LABELS_TOKEN }}" just apply labels
