@@ -22,5 +22,7 @@
 
 Or:
 
-* [ ] I confirm the pull request has no implications for documentation, with justification included in the summary of changes.
+* [ ] I confirm that this pull request requires no changes or additions to documentation.
+
+[//]: # (If your PR does not require changes or additions to documentation, please write your justification here.)
 
