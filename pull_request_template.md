@@ -1,5 +1,3 @@
-
-
 # Pre-submission checklist
 
  * [ ] I read and followed the CONTRIBUTING guidelines.
