@@ -5,7 +5,7 @@
 
 [//]: # (If you can't run the tests locally, create a draft PR to check against the CI pipeline. Once you verify that CI is passing, you can take your PR out of draft status. Please try running the tests locally first, before testing against the CI pipeline.)
 
-## Summary of Changes
+## Summary of changes
 
 
 
