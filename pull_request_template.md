@@ -7,18 +7,20 @@
 
 ## Summary of changes
 
-[//]: # (Please summarize your commits here. For any complex or contentious changes, please provide justifications.)
+[//]: # (Please summarize your commits here. For any complex or contentious changes, please also provide justifications.)
 
 
 #### Related Issues, PRs, and Discussions
 
-[//]: # (Please link to related issues, pull requests, and discussions here. If there are no related issues, PRs, or discussions, please provide a justification for the PR.)
+[//]: # (Please link to related issues, pull requests, and discussions here. If your PR has no related issues, PRs, or discussions, please provide a justification for this PR here instead.)
 
 
 
 ## Docs
 
 * [ ] I have created a pull request to add or update relevant documentation in [charmed-hpc/docs](https://github.com/charmed-hpc/docs) or another documentation location.
+
+[//]: # (If documentation has been updated or added in a location other than charmed-hpc/docs, please note the location here.)
 
 Or:
 
