@@ -18,7 +18,7 @@
 
 ## Docs
 
-* [ ] I have created a pull request to add or update relevant documentation in charmed-hpc/docs or another documentation location.
+* [ ] I have created a pull request to add or update relevant documentation in [charmed-hpc/docs](https://github.com/charmed-hpc/docs) or another documentation location.
 
 Or:
 
