@@ -4,27 +4,25 @@ Do you want to contribute to Charmed HPC? You've come to
 the right place then! __Here is how you can get involved.__
 
 Please take a moment to review this document so that the contribution
-process will be easy and effective for everyone.
-
-Please familiarise yourself with: 
--  The [Juju SDK](https://juju.is/docs/sdk)
-
-Following these guidelines helps you communicate that you respect the maintainers
-managing the Slurm charms. In return, they will reciprocate that respect
+process will be easy and effective for everyone. Following these guidelines helps you communicate that you respect the maintainers
+managing Charmed HPC. In return, they will reciprocate that respect
 while addressing your issue or assessing your submitted changes and/or features.
 
 Have any questions? Feel free to ask them in the [Ubuntu High-Performance Computing
 Matrix chat](https://matrix.to/#/#hpc:ubuntu.com).
 
-### Table of Contents
 
+
+### Table of Contents
+ 
 * [Using the issue tracker](#using-the-issue-tracker)
 * [Issues and Labels](#issues-and-labels)
 * [Bug Reports](#bug-reports)
 * [Enhancement Proposals](#enhancement-proposals)
-* [Pull Requests](#pull-requests)
 * [Discussions](#discussions)
 * [Code Guidelines](#code-guidelines)
+* [Reference Documentation](#reference-documentation)
+* [Pull Requests](#pull-requests)
 * [License](#license)
 
 ## Using the issue tracker
@@ -115,6 +113,48 @@ Please note that not all proposals may be incorporated into the the Slurm charms
 know that spamming the maintainers to incorporate something you want into the Slurm charms
 will not improve the likelihood of being implemented; it may result in you receiving a
 temporary ban from the repository.
+
+## Code guidelines
+
+The following guidelines must be adhered to if you are writing code to be merged into the main code base:
+
+### Monorepo
+
+* We use a mono repository (monorepo) for tracking the development of the Slurm charms.
+  All Slurm-related charms must be contributed to this repository and not
+  broken out into its own standalone repository. Here's why:
+
+  * We can test against the latest commit to the Slurm charms rather than
+    pull what is currently published to edge on Charmhub.
+    * Testing breaking changes is easier since we don't need to test between
+      multiple separate PRs or branches on multiple repositories.
+  * It's easier to enable CI testing for development branches. We can test
+    the `experimental` development branch in the CI pipeline rather than needing
+    to create a separate workflow file off of `main`.
+  * We only need one branch protection to cover the Slurm charms.
+  * We only need one set of integration tests for all the Slurm charms
+    rather than multiple independent tests that repeat common operations.
+  * We only need one extensive set of documentation rather than individual
+    sets scoped per Slurm charm.
+
+### Juju and charmed operators
+
+* Adhere to the operator development best practices outlined in the [operator development styleguide](https://juju.is/docs/sdk/styleguide).
+
+### Python
+
+* Adhere to the Python code style guidelines outlined in [Python Enhancement Proposal 8](https://pep8.org/).
+
+* Adhere to the Python docstring conventions outlined in
+[Python Enhancement Proposal 257](https://www.python.org/dev/peps/pep-0257/).
+  * *Docstrings must follow the
+  [Google docstring format](https://github.com/google/styleguide/blob/gh-pages/pyguide.md#38-comments-and-docstrings)*.
+license
+
+## Reference Documentation 
+
+Please familiarise yourself with: 
+-  The [Juju SDK](https://juju.is/docs/sdk)
 
 ## Pull Requests
 
@@ -209,42 +249,7 @@ discuss potential enhancements, ask questions, and resolve issues. Charmed HPC u
 should remain respectful of each other. Discussion moderators reserve the right to
 suspend discussions and/or delete posts that do not follow this rule.
 
-## Code guidelines
 
-The following guidelines must be adhered to if you are writing code to be merged into the main code base:
-
-### Monorepo
-
-* We use a mono repository (monorepo) for tracking the development of the Slurm charms.
-  All Slurm-related charms must be contributed to this repository and not
-  broken out into its own standalone repository. Here's why:
-
-  * We can test against the latest commit to the Slurm charms rather than
-    pull what is currently published to edge on Charmhub.
-    * Testing breaking changes is easier since we don't need to test between
-      multiple separate PRs or branches on multiple repositories.
-  * It's easier to enable CI testing for development branches. We can test
-    the `experimental` development branch in the CI pipeline rather than needing
-    to create a separate workflow file off of `main`.
-  * We only need one branch protection to cover the Slurm charms.
-  * We only need one set of integration tests for all the Slurm charms
-    rather than multiple independent tests that repeat common operations.
-  * We only need one extensive set of documentation rather than individual
-    sets scoped per Slurm charm.
-
-### Juju and charmed operators
-
-* Adhere to the operator development best practices outlined in the [operator development styleguide](https://juju.is/docs/sdk/styleguide).
-
-### Python
-
-* Adhere to the Python code style guidelines outlined in [Python Enhancement Proposal 8](https://pep8.org/).
-
-* Adhere to the Python docstring conventions outlined in
-[Python Enhancement Proposal 257](https://www.python.org/dev/peps/pep-0257/).
-  * *Docstrings must follow the
-  [Google docstring format](https://github.com/google/styleguide/blob/gh-pages/pyguide.md#38-comments-and-docstrings)*.
-license
 ## License
 
 By contributing your code to the Slurm charms, you agree to license your contribution under the
