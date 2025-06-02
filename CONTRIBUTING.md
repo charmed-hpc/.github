@@ -67,16 +67,16 @@ Can also be used for pull requests.
 
 * `Statues: Help wanted` - Issues where we need help from the greater open source community to solve.
 
-For a complete look at this repository's labels, see the
+For a complete look at the labels, see the
 [project labels page](https://github.com/charmed-hpc/slurm-charms/labels).
 
 ## Bug Reports
 
-A bug is a *demonstrable problem* that is caused by errors in the Slurm charms.
-Good bug reports make the Slurm charms better, so
+A bug is a *demonstrable problem* that is caused by errors in the corresponding repository's code.
+Good bug reports make the code better, so
 thank you for taking the time to report issues!
 
-Guidelines for reporting bugs with the Slurm charms:
+Guidelines for reporting bugs:
 
 1. __Validate your issue__ &mdash; ensure that your issue is not being caused by either
 a semantic or syntactic error in your environment.
@@ -103,39 +103,17 @@ maintainers quickly fix issues with the Slurm charms.
 
 ## Enhancement Proposals
 
-The Charmed HPC core developers may already know what they want to add to the Slurm charms,
+The Charmed HPC core developers may already know what they want to add to Charmed HPC,
 but they are always open to new ideas and potential improvements. GitHub Discussions is
-a good place for discussing open-ended questions that pertain to the entire Charmed HPC
-project, but more focused enhancement proposal discussions can start within the issue
+a good place for discussing open-ended questions that pertain to the entire Charmed HPC project, but more focused enhancement proposal discussions can start within the issue
 tracker.
 
-Please note that not all proposals may be incorporated into the the Slurm charms. Also, please
-know that spamming the maintainers to incorporate something you want into the Slurm charms
-will not improve the likelihood of being implemented; it may result in you receiving a
-temporary ban from the repository.
+Please note that not all proposals may be incorporated into Charmed HPC. Also, please
+know that spamming the maintainers to incorporate something you want will not improve the likelihood of being implemented; it may result in you receiving a temporary ban.
 
 ## Code guidelines
 
 The following guidelines must be adhered to if you are writing code to be merged into the main code base:
-
-### Monorepo
-
-* We use a mono repository (monorepo) for tracking the development of the Slurm charms.
-  All Slurm-related charms must be contributed to this repository and not
-  broken out into its own standalone repository. Here's why:
-
-  * We can test against the latest commit to the Slurm charms rather than
-    pull what is currently published to edge on Charmhub.
-    * Testing breaking changes is easier since we don't need to test between
-      multiple separate PRs or branches on multiple repositories.
-  * It's easier to enable CI testing for development branches. We can test
-    the `experimental` development branch in the CI pipeline rather than needing
-    to create a separate workflow file off of `main`.
-  * We only need one branch protection to cover the Slurm charms.
-  * We only need one set of integration tests for all the Slurm charms
-    rather than multiple independent tests that repeat common operations.
-  * We only need one extensive set of documentation rather than individual
-    sets scoped per Slurm charm.
 
 ### Juju and charmed operators
 
@@ -165,15 +143,14 @@ related to what you are contributing.
 __Ask first__ before embarking on any __significant__ pull request such as
 implementing new features, refactoring methods, or incorporating new libraries;
 otherwise, you risk spending a lot of time working on something that the Charmed HPC
-core developers may not want to merge into the the Slurm charms! For trivial changes,
+core developers may not want to merge! For trivial changes,
 or contributions that do not require a large amount of time, you can go ahead and
 open a pull request.
 
-Adhering to the following process is the best way to get your contribution accepted into
-the Slurm charms:
+Adhering to the following process is the best way to get your contribution accepted:
 
 1. [Fork](https://help.github.com/articles/fork-a-repo/) the project, clone your fork,
-   and configure the remotes:
+   and configure the remotes (example using the slurm-charms repo):
 
    ```bash
    # Clone your fork of the repo into the current directory
@@ -242,6 +219,8 @@ the Slurm charms:
 8. [Open a Pull Request](https://help.github.com/articles/about-pull-requests/)
     with a clear title and description against the `main` branch.
 
+9. (Conditionally) Open a corresponding Pull Request for the documentation following the [charmed-hpc/docs CONTRIBUTING.md guidelines](https://github.com/charmed-hpc/docs/blob/main/CONTRIBUTING.md#pull-requests-and-contributing-process).
+
 ## Discussions
 
 GitHub Discussions is a great place to connect with other Charmed HPC users to
@@ -252,5 +231,5 @@ suspend discussions and/or delete posts that do not follow this rule.
 
 ## License
 
-By contributing your code to the Slurm charms, you agree to license your contribution under the
+By contributing your code to Charmed HPC, you agree to license your contribution under the
 [Apache Software License, version 2.0](https://www.apache.org/licenses/LICENSE-2.0.html).
