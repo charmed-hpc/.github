@@ -20,15 +20,15 @@ Matrix chat](https://matrix.to/#/#hpc:ubuntu.com).
 * [Bug Reports](#bug-reports)
 * [Enhancement Proposals](#enhancement-proposals)
 * [Discussions](#discussions)
-* [Code Guidelines](#code-guidelines)
-* [Reference Documentation](#reference-documentation)
+* [Code and Documentation Guidelines](#code-and-documentation-guidelines)
+* [Useful Resources](#useful-resources)
 * [Pull Requests](#pull-requests)
 * [License](#license)
 
 ## Using the issue tracker
 
-The issue tracker is the preferred way for tracking [bug reports](#bug-reports), [enhancement proposals](#enhancement-proposals),
-and [submitted pull requests](#pull-requests), but please follow these guidelines for the issue tracker:
+The issue trackers are the preferred way for tracking [bug reports](#bug-reports), [enhancement proposals](#enhancement-proposals),
+and [submitted pull requests](#pull-requests), but please follow these guidelines:
 
 * Please __do not__ use the issue tracker for personal issues and/or support requests.
 The [Discussions](#discussions) page is a better place to get help for personal support requests.
@@ -39,36 +39,37 @@ users/contributors of the Slurm charms.
 * Please __do not__ post comments consisting solely of "+1", ":thumbsup:", or something similar.
 Use [GitHub's "reactions" feature](https://blog.github.com/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/)
 instead.
-  * The maintainers of the Slurm charms reserve the right to delete comments
+  * The maintainers reserve the right to delete comments
   that violate this rule.
 
 * Please __do not__ repost or reopen issues that have been closed. Please either
 submit a new issue or browser through previous issues.
-  * The maintainers of Slurm charms reserve the right to delete issues
+  * The maintainers reserve the right to delete issues
   that violate this rule.
 
+* If you are unsure which repository's issue tracker an issue should be raised in, please reach out to the team on [Matrix](https://matrix.to/#/#hpc:ubuntu.com) or the [Charmed HPC Discussions page](https://github.com/orgs/charmed-hpc/discussions) to ask.
+  
 ## Issues and Labels
 
 The issue tracker uses a variety of labels to help organize and identify issues.
 Here is a list of some of these labels, and how the maintainers of the repository use them:
 
-* `Type: Bug` - Issues reported in the source code that either produce errors or unexpected behavior.
+* `C-filesystem` - Issues about the Component: Filesystem.
 
-* `Status: Confirmed` - Issues marked `Type: Bug` that have be confirmed to be reproducible on a separate system.
+* `C-slurm` - Issues about the Component: Slurm.
 
-* `Type: Documentation` - Issues for improving or updating the documentation.
-Can also be used for pull requests.
+* `docs` - Issues for improving or updating the documentation. Can also be used for pull requests.
 
-* `Type: Refactor` - Issues that pertain to improving the existing code base.
+* `cleanup` - Issues that pertain to improving the existing code base. Can also be used for pull requests.
 
-* `Type: Idea Bank` - Issues that pertain to proposing potential improvements to the code base.
+* `feature` - Issues marked as an agreed upon feature to the code base. Can also be used for pull requests.
 
-* `Type: Enhancement` - Issues marked as an agreed upon enhancement to the code base. Can also be used for pull requests.
+* `help wanted` - Issues where we need help from the greater open source community to solve.
 
-* `Statues: Help wanted` - Issues where we need help from the greater open source community to solve.
+* `good first issue` - Issues that may be a good fit for project newcomers looking to contribute.
 
-For a complete look at the labels, see the
-[project labels page](https://github.com/charmed-hpc/slurm-charms/labels).
+For a complete look at a set of labels, see the
+[slurm-charm labels page](https://github.com/charmed-hpc/slurm-charms/labels).
 
 ## Bug Reports
 
@@ -105,15 +106,18 @@ maintainers quickly fix issues with the Slurm charms.
 
 The Charmed HPC core developers may already know what they want to add to Charmed HPC,
 but they are always open to new ideas and potential improvements. GitHub Discussions is
-a good place for discussing open-ended questions that pertain to the entire Charmed HPC project, but more focused enhancement proposal discussions can start within the issue
-tracker.
+a good place for discussing open-ended questions that pertain to the entire Charmed HPC project, but more focused enhancement proposal discussions can start within the issue tracker.
 
 Please note that not all proposals may be incorporated into Charmed HPC. Also, please
 know that spamming the maintainers to incorporate something you want will not improve the likelihood of being implemented; it may result in you receiving a temporary ban.
 
-## Code guidelines
+## Code and Documentation Guidelines
 
-The following guidelines must be adhered to if you are writing code to be merged into the main code base:
+The following guidelines must be adhered to if you are writing code to be merged into any of the respositories within Charmed HPC. Some repositories will have additional code guidelines, please read the corresponding CONTRIBUTING.md within the repository of interest.
+
+### Documentation
+
+Any code contribution should be accompanied by a correspsonding documentation contribution to [Charmed HPC's documentation](https://github.com/charmed-hpc/docs). If the code contribution does not require a documentation addition or change, please provide justification in the Pull Request.
 
 ### Juju and charmed operators
 
@@ -129,9 +133,10 @@ The following guidelines must be adhered to if you are writing code to be merged
   [Google docstring format](https://github.com/google/styleguide/blob/gh-pages/pyguide.md#38-comments-and-docstrings)*.
 license
 
-## Reference Documentation 
+## Useful Resources 
 
-Please familiarise yourself with: 
+The following are list of resources of revelance to Charmed HPC that may be worth skimming prior to making a contribution.
+
 -  The [Juju SDK](https://juju.is/docs/sdk)
 
 ## Pull Requests
