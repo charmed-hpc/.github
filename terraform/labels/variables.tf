@@ -127,6 +127,16 @@ variable "label" {
       description = "Resolution: This issue or pull request is out-of-scope for project"
     },
     {
+      name        = "waiting for author"
+      color       = "7498c0"
+      description = "This issue or pull request is waiting for the author(s) to comment"
+    },
+    {
+      name        = "waiting for reviewer"
+      color       = "7498c0"
+      description = "This issue or pull request is waiting for the reviewer(s) to comment"
+    },
+    {
       name        = "ux"
       color       = "3b33d1"
       description = "This pull request changes the user experience of the project"
@@ -139,8 +149,10 @@ variable "repository" {
   type        = set(string)
   default = [
     ".github",
-    "docs",
+    "apptainer-operator",
+    "charmed-hpc-benchmarks",
     "charmed-hpc-terraform",
+    "docs",
     "hpc-libs",
     "slurm-charms",
     "slurm-snap",
