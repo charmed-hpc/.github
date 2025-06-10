@@ -16,12 +16,29 @@ provider "github" {
   owner = "charmed-hpc"
 }
 
-resource "github_issue_labels" "charmed-hpc-project-repos" {
+data "github_issue_labels" "existing-labels" {
+  for_each   = var.repository
+  repository = each.value
+}
+
+locals {
+  existing-labels = {
+    for repo in data.github_issue_labels.existing-labels :
+    repo.repository => [
+      for label in repo.labels : label.name
+    ]
+  }
+}
+
+resource "github_issue_labels" "charmed-hpc-project-labels" {
   for_each   = var.repository
   repository = each.value
 
   dynamic "label" {
-    for_each = var.label
+    for_each = [
+      for label in var.label :
+      label if contains(local.existing-labels[each.key], label.name) != true
+    ]
     content {
       name        = label.value["name"]
       color       = label.value["color"]
