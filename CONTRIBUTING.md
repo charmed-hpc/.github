@@ -99,7 +99,7 @@ Some common questions you should answer in your report include:
 * What was your expected outcome?
 
 Please try to be as detailed as possible in your report. All these details will help the
-maintainers quickly fix issues with the Slurm charms.
+maintainers quickly fix issues.
 
 ## Enhancement Proposals
 
