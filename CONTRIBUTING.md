@@ -43,7 +43,7 @@ instead.
   that violate this rule.
 
 * Please __do not__ repost or reopen issues that have been closed. Please either
-submit a new issue or browser through previous issues.
+submit a new issue or browse through previous issues.
   * The maintainers reserve the right to delete issues
   that violate this rule.
 
