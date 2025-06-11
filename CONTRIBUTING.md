@@ -20,8 +20,7 @@ Matrix chat](https://matrix.to/#/#hpc:ubuntu.com).
 * [Bug Reports](#bug-reports)
 * [Enhancement Proposals](#enhancement-proposals)
 * [Discussions](#discussions)
-* [Code and Documentation Guidelines](#code-and-documentation-guidelines)
-* [Useful Resources](#useful-resources)
+* [Guidelines and Resources](#guidelines-and-resources)
 * [Pull Requests](#pull-requests)
 
 ## Using the issue tracker
@@ -109,13 +108,18 @@ a good place for discussing open-ended questions that pertain to the entire Char
 Please note that not all proposals may be incorporated into Charmed HPC. Also, please
 know that spamming the maintainers to incorporate something you want will not improve the likelihood of being implemented; it may result in you receiving a temporary ban.
 
-## Code and Documentation Guidelines
+## Guidelines and Resources
 
-The following guidelines must be adhered to if you are writing code to be merged into any of the respositories within Charmed HPC. Some repositories will have additional code guidelines, please read the corresponding CONTRIBUTING.md within the repository of interest.
+The following guidelines must be followed if you are writing code to be merged into any of the respositories within Charmed HPC. Some repositories will have additional guidelines; please read the corresponding CONTRIBUTING.md within the repository of interest.
 
 ### Documentation
 
-Any code contribution should be accompanied by a correspsonding documentation contribution to [Charmed HPC's documentation](https://github.com/charmed-hpc/docs). If the code contribution does not require a documentation addition or change, please provide justification in the Pull Request.
+* Any code contribution should be accompanied by a correspsonding documentation contribution to [Charmed HPC's documentation](https://github.com/charmed-hpc/docs).
+  * If the code contribution does not require a documentation addition or change, please provide justification in the Pull Request.
+
+### Conventional Commits 
+
+* Follow [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
 
 ### Juju and charmed operators
 
@@ -131,7 +135,7 @@ Any code contribution should be accompanied by a correspsonding documentation co
   [Google docstring format](https://github.com/google/styleguide/blob/gh-pages/pyguide.md#38-comments-and-docstrings)*.
 license
 
-## Useful Resources 
+### Useful Resources 
 
 The following are list of resources of revelance to Charmed HPC that may be worth skimming prior to making a contribution.
 
