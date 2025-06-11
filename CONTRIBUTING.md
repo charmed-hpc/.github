@@ -68,7 +68,7 @@ Here is a list of some of these labels, and how the maintainers of the repositor
 
 * `good first issue` - Issues that may be a good fit for project newcomers looking to contribute.
 
-For a complete look at a set of labels, see the
+For a look at a complete set of labels used by one of the Charmed HPC repositories, see the
 [slurm-charm labels page](https://github.com/charmed-hpc/slurm-charms/labels).
 
 ## Bug Reports
