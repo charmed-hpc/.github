@@ -23,7 +23,6 @@ Matrix chat](https://matrix.to/#/#hpc:ubuntu.com).
 * [Code and Documentation Guidelines](#code-and-documentation-guidelines)
 * [Useful Resources](#useful-resources)
 * [Pull Requests](#pull-requests)
-* [License](#license)
 
 ## Using the issue tracker
 
@@ -231,9 +230,3 @@ GitHub Discussions is a great place to connect with other Charmed HPC users to
 discuss potential enhancements, ask questions, and resolve issues. Charmed HPC users
 should remain respectful of each other. Discussion moderators reserve the right to
 suspend discussions and/or delete posts that do not follow this rule.
-
-
-## License
-
-By contributing your code to Charmed HPC, you agree to license your contribution under the
-[Apache Software License, version 2.0](https://www.apache.org/licenses/LICENSE-2.0.html).
