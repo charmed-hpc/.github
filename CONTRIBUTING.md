@@ -151,10 +151,10 @@ core developers may not want to merge! For trivial changes,
 or contributions that do not require a large amount of time, you can go ahead and
 open a pull request.
 
-Adhering to the following process is the best way to get your contribution accepted:
+Adhering to the following process is the best way to get your contribution accepted (example uses the slurm-charms repo):
 
 1. [Fork](https://help.github.com/articles/fork-a-repo/) the project, clone your fork,
-   and configure the remotes (example using the slurm-charms repo):
+   and configure the remotes:
 
    ```bash
    # Clone your fork of the repo into the current directory
