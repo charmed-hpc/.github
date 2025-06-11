@@ -86,7 +86,7 @@ a semantic or syntactic error in your environment.
 already been reported by someone else.
 
 3. __Check if the issue has already been fixed__ &mdash; try to reproduce your issue
-using the latest version of the Slurm charms.
+using the latest revision of the repository.
 
 4. __Isolate the problem__ &mdash; the more pinpointed the issue with the Slurm charms
 is, the easier it is to fix.
