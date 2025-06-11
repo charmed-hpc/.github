@@ -88,8 +88,7 @@ already been reported by someone else.
 3. __Check if the issue has already been fixed__ &mdash; try to reproduce your issue
 using the latest revision of the repository.
 
-4. __Isolate the problem__ &mdash; the more pinpointed the issue with the Slurm charms
-is, the easier it is to fix.
+4. __Isolate the problem__ &mdash; the more pinpointed the issue, the easier it is to fix.
 
 A good bug report should not leave others needing to chase you for more information.
 Some common questions you should answer in your report include:
