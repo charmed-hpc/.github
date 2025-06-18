@@ -154,23 +154,23 @@ core developers may not want to merge! For trivial changes,
 or contributions that do not require a large amount of time, you can go ahead and
 open a pull request.
 
-Adhering to the following process is the best way to get your contribution accepted (example uses the slurm-charms repo):
+Adhering to the following process is the best way to get your contribution accepted:
 
 1. [Fork](https://help.github.com/articles/fork-a-repo/) the project, clone your fork,
    and configure the remotes:
 
    ```bash
    # Clone your fork of the repo into the current directory
-   git clone https://github.com/<your-username>/slurm-charms.git
+   git clone https://github.com/<your-username>/<repository>.git
 
    # Navigate to the newly cloned directory
-   cd slurm-charms
+   cd <repository>
 
    # Assign the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/charmed-hpc/slurm-charms.git
+   git remote add upstream https://github.com/charmed-hpc/<repository>.git
    ```
 
-2. If you cloned a while ago, pull the latest changes from the upstream slurm-charms repository:
+2. If you cloned a while ago, pull the latest changes from the upstream repository:
 
    ```bash
    git checkout main
@@ -184,26 +184,13 @@ Adhering to the following process is the best way to get your contribution accep
    git checkout -b <topic-branch-name>
    ```
 
-4. Ensure that your changes pass all tests:
+4. Ensure that your changes pass all tests.
 
-    ```bash
-    # Apply formatting standards to code.
-    just repo fmt
+   The tests may differ for different repositories. See the corresponding repository's CONTRIBUTING.md file
+    for details on the appropriate tests. 
 
-    # Check code against coding style standards.
-    just repo lint
 
-    # Run type checking.
-    just repo typecheck
-
-    # Run unit tests.
-    just repo unit
-
-    # Run integration tests.
-    just repo integration
-    ```
-
-5. Commit your changes in logical chunks to your topic branch.
+7. Commit your changes in logical chunks to your topic branch.
 
    Our project follows the
    [Conventional Commits specification, version 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/).
@@ -211,22 +198,22 @@ Adhering to the following process is the best way to get your contribution accep
    [interactive rebase](https://help.github.com/articles/about-git-rebase/) feature to
    tidy up your commits before pushing them to your origin branch.
 
-6. Locally merge (or rebase) the upstream development branch into your topic branch:
+8. Locally merge (or rebase) the upstream development branch into your topic branch:
 
    ```bash
    git pull [--rebase] upstream main
    ```
 
-7. Push your topic branch up to your fork:
+9. Push your topic branch up to your fork:
 
    ```bash
    git push origin <topic-branch-name>
    ```
 
-8. [Open a Pull Request](https://help.github.com/articles/about-pull-requests/)
+10. [Open a Pull Request](https://help.github.com/articles/about-pull-requests/)
     with a clear title and description against the `main` branch.
 
-9. (Conditionally) Open a corresponding Pull Request for the documentation following the [charmed-hpc/docs CONTRIBUTING.md guidelines](https://github.com/charmed-hpc/docs/blob/main/CONTRIBUTING.md#pull-requests-and-contributing-process).
+11. (Conditionally) Open a corresponding Pull Request for the documentation following the [charmed-hpc/docs CONTRIBUTING.md guidelines](https://github.com/charmed-hpc/docs/blob/main/CONTRIBUTING.md#pull-requests-and-contributing-process).
 
 ## Discussions
 
