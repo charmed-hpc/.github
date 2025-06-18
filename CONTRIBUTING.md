@@ -139,13 +139,13 @@ license
 
 The following list provides a variety of resources of revelance to Charmed HPC that may be worth skimming prior to making a contribution.
 
--  The [Charmed HPC documentation](https://canonical-charmed-hpc.readthedocs-hosted.com/latest/)
--  The [Juju SDK](https://juju.is/docs/sdk)
--  The [Charmcraft documentation](https://canonical-charmcraft.readthedocs-hosted.com/stable/)
--  The [Ops library documentation](https://ops.readthedocs.io/en/latest/) for Juju
--  The [Terraform Provider for Juju documentation](https://canonical-terraform-provider-juju.readthedocs-hosted.com/en/latest/)
--  The [Terraform documentation](https://developer.hashicorp.com/terraform/docs)
--  The [Slurm workload managed documentation](https://slurm.schedmd.com/documentation.html)
+-  [Charmed HPC documentation](https://canonical-charmed-hpc.readthedocs-hosted.com/latest/)
+-  [Juju SDK](https://juju.is/docs/sdk)
+-  [Charmcraft documentation](https://canonical-charmcraft.readthedocs-hosted.com/stable/)
+-  [Ops library documentation](https://ops.readthedocs.io/en/latest/) for Juju
+-  [Terraform Provider for Juju documentation](https://canonical-terraform-provider-juju.readthedocs-hosted.com/en/latest/)
+-  [Terraform documentation](https://developer.hashicorp.com/terraform/docs)
+-  [Slurm workload managed documentation](https://slurm.schedmd.com/documentation.html)
 
 ## Pull Requests
 
