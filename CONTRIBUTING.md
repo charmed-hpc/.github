@@ -32,7 +32,7 @@ and [submitted pull requests](#pull-requests), but please follow these guideline
 The [Discussions](#discussions) page is a better place to get help for personal support requests.
 
 * Please __do not__ derail or troll issues. Keep the discussion on track and have respect for the other
-users/contributors of the Slurm charms.
+users/contributors.
 
 * Please __do not__ post comments consisting solely of "+1", ":thumbsup:", or something similar.
 Use [GitHub's "reactions" feature](https://blog.github.com/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/)
@@ -103,14 +103,14 @@ maintainers quickly fix issues.
 
 The Charmed HPC core developers may already know what they want to add to Charmed HPC,
 but they are always open to new ideas and potential improvements. GitHub Discussions is
-a good place for discussing open-ended questions that pertain to the entire Charmed HPC project, but more focused enhancement proposal discussions can start within the issue tracker.
+a good place for discussing open-ended questions that pertain to the entire Charmed HPC project, but more focused enhancement proposal discussions can start within an issue tracker.
 
 Please note that not all proposals may be incorporated into Charmed HPC. Also, please
 know that spamming the maintainers to incorporate something you want will not improve the likelihood of being implemented; it may result in you receiving a temporary ban.
 
 ## Guidelines and Resources
 
-The following guidelines must be followed if you are writing code to be merged into any of the respositories within Charmed HPC. Some repositories will have additional guidelines; please read the corresponding CONTRIBUTING.md within the repository of interest.
+The following guidelines should be followed if you are writing code to be merged into any of the respositories within Charmed HPC. Some repositories will have additional guidelines; please read the corresponding CONTRIBUTING.md within the repository of interest.
 
 ### Documentation
 
@@ -137,9 +137,12 @@ license
 
 ### Useful Resources 
 
-The following are list of resources of revelance to Charmed HPC that may be worth skimming prior to making a contribution.
+The following list provides a variety of resources of revelance to Charmed HPC that may be worth skimming prior to making a contribution.
 
 -  The [Juju SDK](https://juju.is/docs/sdk)
+-  The [Slurm workload managed documentation](https://slurm.schedmd.com/documentation.html)
+-  The [Terraform documentation](https://developer.hashicorp.com/terraform/docs)
+-  
 
 ## Pull Requests
 
