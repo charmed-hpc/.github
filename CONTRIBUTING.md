@@ -128,7 +128,7 @@ To have your Python code contributions accepted into Charmed HPC, you must:
 
 * Use type annotations. Stub files can be used for providing type information for public modules.
 
-* Pass all int and static type checks.
+* Pass all lint and static type checks.
 
 * Pass all of the repository's existing unit and integration tests.
 
