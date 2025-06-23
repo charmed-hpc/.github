@@ -17,7 +17,7 @@ integration, and life-cycle management of essential HPC software. It also automa
 ### Communication
 
 * Talk to us on [Matrix](https://matrix.to/#/#hpc:ubuntu.com).
-* Come to our [weekly community call](https://www.google.com/url?q=https://meet.jit.si/Ubuntu-HPC&sa=D&source=calendar&ust=1750641827322789&usg=AOvVaw2czyrm-Ywrc9xBB7xB4tvJ) - Wednesday's at 16:30 UTC/4:30 EDT.
+* Come to our [weekly community call](https://www.google.com/url?q=https://meet.jit.si/Ubuntu-HPC&sa=D&source=calendar&ust=1750641827322789&usg=AOvVaw2czyrm-Ywrc9xBB7xB4tvJ) - Wednesdays at 16:30 UTC/4:30 EDT.
 * Open a discussion on GitHub.
 
 ### Contributing
