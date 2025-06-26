@@ -21,6 +21,7 @@ integration, and life-cycle management of essential HPC software. It also automa
 * Open a discussion on GitHub.
 
 ### Contributing
+
 See the main [CONTRIBUTING.md](https://github.com/charmed-hpc/.github/CONTRIBUTING.md) guide for information regarding code guidelines, opening issues or discussions, and creating pull requests. Please also read through the relevant per-repository CONTRIBUTING.md guides for repo-specific contributing expectations and requirements.
 
 The Charmed HPC project maintainers ask that each contribution is passing the corresponding repository's CI workflows when submitting a Pull Request.
