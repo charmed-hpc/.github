@@ -1,11 +1,7 @@
-<p align="center">
-
-<img src="./.github/images/charmed-hpc-logo.png" alt="HPC logo of white atom symbol on Ubuntu orange background" style="width: 20vw;" />
-
-</p>
-
 <div align="center">
-  
+
+<img src="./.github/images/charmed-hpc-logo.png" alt="HPC logo of white atom symbol on Ubuntu orange background" style="width: 10vw;" />
+
 # Welcome to Charmed HPC!
 
 __Automate the deployment and management of your supercomputing clusters 🚀__
