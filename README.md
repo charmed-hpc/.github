@@ -42,7 +42,6 @@ See the [Charmed HPC project documentation site](https://canonical-charmed-hpc.r
 
 ## ❓ FAQ
 
-
 ### Can I contribute to Charmed HPC even if I do not feel like I am an HPC expert or I have no idea what the Ubuntu HPC community does?
 
 Absolutely! Anyone can contribute to Charmed HPC! All we ask is that you first review the [contributing section](#contributing) of this README before starting work on your first contribution.
