@@ -30,7 +30,7 @@ Interested in making code contributions to Charmed HPC? Here are some general gu
 2. Use [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/).
 3. Start a discussion with the project maintainers before embarking on any major pull requests such as introducting major features, adding new dependencies, or refactoring existing behaviour. 
 
-For further details about contributing to Charmed HPC, see the [main CONTRIBUTING.md guide](https://github.com/charmed-hpc/.github/CONTRIBUTING.md) for more in-depth information regarding code guidelines, opening issues or discussions, and creating pull requests. Each repository also has their own specific CONTRIBUTING.md guide that should be consulted well before opening a pull request.
+For further details about contributing to Charmed HPC, see the [main CONTRIBUTING.md guide](https://github.com/charmed-hpc/.github/blob/main/CONTRIBUTING.md) for more in-depth information regarding code guidelines, opening issues or discussions, and creating pull requests. Each repository also has their own specific CONTRIBUTING.md guide that should be consulted well before opening a pull request.
 
 ### Documentation
 
