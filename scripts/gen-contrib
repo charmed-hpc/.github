@@ -27,6 +27,9 @@ DEFAULT_ORG_CONTRIBUTING_URL = (
     "https://github.com/charmed-hpc/docs/blob/main/CONTRIBUTING.md"
 )
 DEFAULT_MATRIX_URL = "https://matrix.to/#/#hpc:ubuntu.com"
+DEFAULT_GITHUB_DISCUSSIONS_URL = (
+    "https://github.com/orgs/charmed-hpc/discussions/categories/support"
+)
 LICENSES = {
     "agpl-3.0-only": "https://github.com/spdx/license-list-data/raw/refs/heads/main/json/details/AGPL-3.0-only.json",
     "apache-2.0": "https://github.com/spdx/license-list-data/raw/refs/heads/main/json/details/Apache-2.0.json",
@@ -41,14 +44,15 @@ Do you want to contribute to the `${repo}` repository? You've come to the right 
 __Here is how you can get involved.__
 
 Before you start working on your contribution, please familiarize yourself with the [Charmed
-HPC project's contributing guide]. Come back here after you've gone through
-the main contributing guide for specific information on contributing to the
-`${repo}` repository.
+HPC project's contributing guide]. After you've gone through the main contributing guide,
+you can use this guide for specific information on contributing to the `${repo}` repository.
 
-Have any questions? Feel free to ask them in the [Ubuntu High-Performance Computing Matrix chat].
+Have any questions? Feel free to ask them in the [Ubuntu High-Performance Computing Matrix chat]
+or on [GitHub Discussions].
 
 [Charmed HPC project's contributing guide]: ${org_contrib_url}
 [Ubuntu High-Performance Computing Matrix chat]: ${matrix_url}
+[GitHub Discussions]: ${github_discussions_url}
 
 ## Hacking on `${repo}`
 
@@ -108,13 +112,19 @@ if __name__ == "__main__":
         "--org-contrib-url",
         default=DEFAULT_ORG_CONTRIBUTING_URL,
         type=str,
-        help="link to org-level contrib file",
+        help="override link to org-level contrib file",
     )
     parser.add_argument(
         "--matrix-url",
         default=DEFAULT_MATRIX_URL,
         type=str,
-        help="link to the ubuntu hpc matrix",
+        help="override link to the ubuntu hpc matrix",
+    )
+    parser.add_argument(
+        "--github-discussions-url",
+        default=DEFAULT_GITHUB_DISCUSSIONS_URL,
+        type=str,
+        help="override link github discussions",
     )
     parser.add_argument(
         "--repo-contrib",
@@ -186,9 +196,10 @@ if __name__ == "__main__":
             current_year=datetime.now().year,
             org_contrib_url=args.org_contrib_url,
             matrix_url=args.matrix_url,
+            github_discussions_url=args.github_discussions_url,
             repo_contrib=args.repo_contrib or "",
             before_pr_contrib=args.before_pr_contrib or "",
             additional_license_info=args.additional_license_info or "",
         ),
-        file=open(args.output, "wt") or sys.stdout,
+        file=open(args.output, "wt") if args.output else sys.stdout,
     )
