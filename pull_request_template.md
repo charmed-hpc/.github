@@ -1,7 +1,7 @@
 # Pre-submission checklist
 
  * [ ] I read and followed the CONTRIBUTING guidelines.
- * [ ] I have insured that lint, typecheck, and unit tests complete successfully.
+ * [ ] I have ensured that lint, typecheck, and unit tests complete successfully.
 
 [//]: # (If you can't run the tests locally, create a draft PR to check against the CI pipeline. Once you verify that CI is passing, you can take your PR out of draft status. Please try running the tests locally first, before testing against the CI pipeline.)
 
