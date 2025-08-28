@@ -17,6 +17,11 @@ variable "label" {
   type        = list(map(string))
   default = [
     {
+      name        = "backport"
+      color       = "160177"
+      description = "Add this label on a PR to backport its commits to our list of maintained branches"
+    },
+    {
       name        = "blocked"
       color       = "57006f"
       description = "A dependency must be resolved before this is actionable"
