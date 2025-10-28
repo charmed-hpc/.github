@@ -164,5 +164,6 @@ variable "repository" {
     "slurmutils",
     "filesystem-charms",
     "ondemand-snap",
+    "specs",
   ]
 }
