@@ -22,14 +22,14 @@ data "github_issue_labels" "existing-labels" {
 }
 
 locals {
-  repos_labels = [
-    for pair in setproduct(var.repository, var.label) : {
+  repos_labels = tomap({
+    for pair in setproduct(var.repository, var.label) : "${pair[0]}-${pair[1].name}" => {
       repository        = pair[0]
       label_name        = pair[1].name
       label_color       = pair[1].color
       label_description = pair[1].description
     }
-  ]
+  })
 }
 
 resource "github_issue_label" "charmed-hpc-project-labels" {
