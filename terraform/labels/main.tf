@@ -22,27 +22,20 @@ data "github_issue_labels" "existing-labels" {
 }
 
 locals {
-  existing-labels = {
-    for repo in data.github_issue_labels.existing-labels :
-    repo.repository => [
-      for label in repo.labels : label.name
-    ]
-  }
+  repos_labels = [
+    for pair in setproduct(var.repository, var.label) : {
+      repository        = pair[0]
+      label_name        = pair[1].name
+      label_color       = pair[2].color
+      label_description = pair[3].description
+    }
+  ]
 }
 
-resource "github_issue_labels" "charmed-hpc-project-labels" {
-  for_each   = var.repository
-  repository = each.value
-
-  dynamic "label" {
-    for_each = [
-      for label in var.label :
-      label if contains(local.existing-labels[each.key], label.name) != true
-    ]
-    content {
-      name        = label.value["name"]
-      color       = label.value["color"]
-      description = label.value["description"]
-    }
-  }
+resource "github_issue_label" "charmed-hpc-project-labels" {
+  for_each    = local.repos_labels
+  repository  = each.value.repository
+  name        = each.value.label_name
+  color       = each.value.label_color
+  description = each.value.label_description
 }
