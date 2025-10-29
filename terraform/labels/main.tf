@@ -26,8 +26,8 @@ locals {
     for pair in setproduct(var.repository, var.label) : {
       repository        = pair[0]
       label_name        = pair[1].name
-      label_color       = pair[2].color
-      label_description = pair[3].description
+      label_color       = pair[1].color
+      label_description = pair[1].description
     }
   ]
 }
