@@ -145,6 +145,16 @@ variable "label" {
       name        = "ux"
       color       = "3b33d1"
       description = "This pull request changes the user experience of the project"
+    },
+    {
+      name        = "Charmed HPC 2026.1"
+      color       = "ccedc7"
+      description = "The resolution for this issue will be included in Charmed HPC 2026.1"
+    },
+    {
+      name        = "Charmed Slurm 25.11"
+      color       = "ccedc7"
+      description = "The resolution for this issue will be included in Charmed Slurm 25.11"
     }
   ]
 }
