@@ -1,0 +1,20 @@
+name: Connectivity Test
+
+on:
+  push:
+    branches: [ connectivity-test ]
+  workflow_dispatch:
+
+jobs:
+  check-api:
+    runs-on: [self-hosted-linux-amd64-noble-xlarge]
+
+    steps:
+      - name: Test Connectivity to Canonical SBOM API
+        run: |
+          echo "Testing connection to sbom-request.canonical.com..."
+          # -I: Fetch headers only
+          # -s: Silent mode
+          # -S: Show errors if it fails
+          # -L: Follow redirects
+          curl -IsS -L https://sbom-request.canonical.com/api/v1 --connect-timeout 30
