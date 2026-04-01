@@ -1,0 +1,16 @@
+clients:
+  sbom:
+      department: cloud_engineering
+      email: dominic.sloanmurphy@canonical.com  # FIXME: replace with group mailing list
+      team: hpc
+  secscan: {}
+
+artifacts:
+  - name: slurm
+    channel: latest/edge
+    type: snap
+
+  # TODO: address issue of ondemand scan taking days to complete
+  # - name: ondemand
+  #   channel: latest/edge
+  #   type: snap

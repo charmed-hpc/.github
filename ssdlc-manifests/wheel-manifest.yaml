@@ -1,0 +1,10 @@
+clients:
+  sbom:
+      department: cloud_engineering
+      email: dominic.sloanmurphy@canonical.com  # FIXME: replace with group mailing list
+      team: hpc
+  secscan: {}
+
+artifacts:
+  - name: slurmutils
+    type: wheel

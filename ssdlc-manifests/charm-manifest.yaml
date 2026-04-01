@@ -1,0 +1,51 @@
+clients:
+  sbom:
+      department: cloud_engineering
+      email: dominic.sloanmurphy@canonical.com  # FIXME: replace with group mailing list
+      team: hpc
+  secscan: {}
+
+artifacts:
+  - name: nfs-server-proxy
+    channel: latest/edge
+    type: charm
+
+  - name: cephfs-server-proxy
+    channel: latest/edge
+    type: charm
+
+  - name: filesystem-client
+    channel: latest/edge
+    type: charm
+
+  - name: sackd
+    channel: latest/edge
+    type: charm
+
+  - name: slurmctld
+    channel: latest/edge
+    type: charm
+
+  - name: slurmd
+    channel: latest/edge
+    type: charm
+
+  - name: slurmdbd
+    channel: latest/edge
+    type: charm
+
+  - name: slurmrestd
+    channel: latest/edge
+    type: charm
+
+  - name: apptainer
+    channel: latest/edge
+    type: charm
+
+  - name: sssd
+    channel: latest/edge
+    type: charm
+
+  - name: mysql-proxy
+    channel: latest/edge
+    type: charm

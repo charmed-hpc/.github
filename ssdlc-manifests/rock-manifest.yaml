@@ -1,0 +1,33 @@
+# TODO: This file is unusued and included only as a placeholder. It must be redone once the rocks are published. Currently they must be built and submitted manually
+
+clients:
+  sbom:
+      department: cloud_engineering
+      email: dominic.sloanmurphy@canonical.com  # FIXME: replace with group mailing list
+      team: hpc
+  secscan: {}
+
+artifacts:
+  - name: sackd_25.05.3_amd64.rock
+    source: /path/to/sackd_25.05.3_amd64.rock
+    type: rock
+
+  - name: slurmctld_25.05.3_amd64.rock
+    source: /path/to/slurmctld_25.05.3_amd64.rock
+    type: rock
+
+  - name: slurmd_25.05.3_amd64.rock
+    source: /path/to/slurmd_25.05.3_amd64.rock
+    type: rock
+
+  - name: slurmdbd_25.05.3_amd64.rock
+    source: /path/to/slurmdbd_25.05.3_amd64.rock
+    type: rock
+
+  - name: slurmrestd_25.05.3_amd64.rock
+    source: /path/to/slurmrestd_25.05.3_amd64.rock
+    type: rock
+
+  - name: login_25.05.3_amd64.rock
+    source: /path/to/login_25.05.3_amd64.rock
+    type: rock
