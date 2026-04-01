@@ -10,11 +10,11 @@ jobs:
     runs-on: [self-hosted-linux-amd64-noble-xlarge]
 
     steps:
-      - name: Test Connectivity to Canonical SBOM API
+      - name: Test Connectivity
         run: |
-          echo "Testing connection to sbom-request.canonical.com..."
+          echo "Testing connection"
           # -I: Fetch headers only
           # -s: Silent mode
           # -S: Show errors if it fails
           # -L: Follow redirects
-          curl -IsS -L https://sbom-request.canonical.com/api/v1 --connect-timeout 30
+          curl -IsS -L https://security-vm-scanning-batch.internal --connect-timeout 30
