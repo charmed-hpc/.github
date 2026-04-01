@@ -17,4 +17,4 @@ jobs:
           # -s: Silent mode
           # -S: Show errors if it fails
           # -L: Follow redirects
-          curl -IsS -L https://security-vm-scanning-batch.internal --connect-timeout 30
+          curl -k -IsS -L https://security-vm-scanning-batch.internal --connect-timeout 30
