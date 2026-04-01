@@ -1,0 +1,37 @@
+# Performs per cycle SBOM generation and security scanning in line with SSDLC requirements.
+# NOTE: manual submission as a source .zip is still needed for:
+#
+# https://github.com/charmed-hpc/hpc-libs
+# https://github.com/charmed-hpc/charmed-hpc-benchmarks
+# https://github.com/charmed-hpc/charmed-hpc-terraform
+
+name: SSDLC scanning
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 10 3,9 *"
+#            │ │ │  │   │
+#            │ │ │  │   └── any day of the week.
+#            │ │ │  └────── 3rd and 9th month (March & September).
+#            │ │ └───────── 10th day of the month.
+#            │ └─────────── 0th hour of the day.
+#            └───────────── Start of the hour (minutes = 0).
+
+jobs:
+  scan:
+    runs-on: [self-hosted-linux-amd64-noble-xlarge]
+    strategy:
+      fail-fast: false
+      matrix:
+        artifact: [charm, snap, wheel]
+
+    name: SSDLC scanning - SBOM and Secscan - ${{ matrix.artifact }} artifacts
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run sbomber action
+        uses: canonical/sbomber/.github/actions/run@main
+        with:
+          manifest: "${{ github.workspace }}/ssdlc-manifests/${{ matrix.artifact }}-manifest.yaml"
+          artifact-name: ${{ matrix.artifact }}
