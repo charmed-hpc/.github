@@ -45,7 +45,3 @@ artifacts:
   - name: sssd
     channel: latest/edge
     type: charm
-
-  - name: mysql-proxy
-    channel: latest/edge
-    type: charm
