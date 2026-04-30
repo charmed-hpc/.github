@@ -1,5 +1,5 @@
 #!/usr/bin/env just --justfile
-# Copyright 2025 Canonical Ltd.
+# Copyright 2025-2026 Canonical Ltd.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,21 +23,28 @@ default_plan_list := shell("ls -d -- $1/*", terraform_dir)
 default:
     @just help
 
-# Apply formatting standards to project
-[group("dev")]
-fmt:
-    just --fmt --unstable
-    tofu fmt -recursive
+# Prepare the local environment
+setup: init
 
 # Clean project directory
-[group("dev")]
 clean:
     find . -name .terraform -type d | xargs rm -rf
     find . -name .terraform.lock.hcl -type f | xargs rm -rf
     find . -name "terraform.tfstate*" -type f | xargs rm -rf
 
+# Apply static checks
+check: fmt validate
+
+# Run tests for specified targets, or all tests if none specified
+test *targets:
+    @echo "No tests to run"
+
+# Apply formatting standards to project
+fmt:
+    just --fmt --unstable
+    tofu fmt -recursive
+
 # Initialize Terraform plans
-[group("terraform")]
 init *plans:
     #!/usr/bin/env bash
     set -euxo pipefail
@@ -47,7 +54,6 @@ init *plans:
     done
 
 # Validate Terraform plans
-[group("terraform")]
 validate *plans: (init plans)
     #!/usr/bin/env bash
     set -euxo pipefail
@@ -58,7 +64,6 @@ validate *plans: (init plans)
     done
 
 # Apply Terraform plans
-[group("terraform")]
 apply *plans: (validate plans)
     #!/usr/bin/env bash
     set -euxo pipefail
