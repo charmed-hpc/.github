@@ -1,4 +1,4 @@
-# Copyright 2025-2026 Canonical Ltd.
+# Copyright 2026 Canonical Ltd.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,15 +11,18 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+name: Setup just
+description: Install a pinned version of just
 
-name: CI
-on:
-  workflow_call:
-  pull_request:
+inputs:
+  just-version:
+    description: Override the pinned just version
+    required: false
+    default: "1.48.1"
 
-jobs:
-  ci:
-    uses: ./.github/workflows/charmed-hpc-ci.yaml
-    with:
-      run-test: false
-      setup-commands: sudo snap install opentofu --classic --channel latest/stable
+runs:
+  using: composite
+  steps:
+    - uses: extractions/setup-just@v4
+      with:
+        just-version: ${{ inputs.just-version }}
