@@ -1,0 +1,100 @@
+# Copyright 2026 Canonical Ltd.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+name: Publish monorepo Python packages
+
+on:
+  workflow_call:
+
+jobs:
+  get-packages:
+    name: Get changed packages
+    runs-on: ubuntu-24.04
+    outputs:
+      packages: ${{ steps.changed.outputs.packages }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Detect version bumps
+        id: changed
+        run: |
+          # Check if version changed between commits.
+          packages=$(
+            git diff ${{ github.event.push.before }} ${{ github.event.push.after }} --name-only \
+              | grep "^pkg/[^/]*/pyproject\.toml$" \
+              | while read -r f; do
+                  old=$(git show ${{ github.event.push.before }}:"$f" 2>/dev/null | grep '^version' | head -1 | awk -F'"' '{print $2}')
+                  new=$(git show ${{ github.event.push.after }}:"$f" | grep '^version' | head -1 | awk -F'"' '{print $2}')
+                  if [ -z "$old" ]; then
+                    # New package, no previous version.
+                    echo "$f"
+                  elif [ "$old" != "$new" ]; then
+                    # Only publish if it's a version increase, otherwise, skip publishing.
+                    lowest=$(printf '%s\n' "$old" "$new" | sort --version-sort | head -1)
+                    if [ "$lowest" = "$old" ]; then
+                      echo "$f"
+                    fi
+                  fi
+                done \
+              | xargs -I{} dirname {} \
+              | xargs -I{} basename {} \  # Grab package name. E.g. `slurm-oci-runtime-interface`.
+              | jq -R . | jq -sc .
+          )
+          echo "packages=${packages}" >> "$GITHUB_OUTPUT"
+
+  build:
+    name: Build | ${{ matrix.package }}
+    needs: get-packages
+    if: needs.get-packages.outputs.packages != '[]'
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        package: ${{ fromJSON(needs.get-packages.outputs.packages) }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        run: sudo snap install astral-uv --classic
+
+      - name: Build ${{ matrix.package }}
+        run: uv build pkg/${{ matrix.package }}
+
+      - name: Upload dist artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist-${{ matrix.package }}
+          path: dist/
+
+  publish:
+    name: Publish | ${{ matrix.package }}
+    needs: build
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        package: ${{ fromJSON(needs.get-packages.outputs.packages) }}
+    permissions:
+      id-token: write
+    environment:
+      name: pypi
+    steps:
+      - name: Download dist artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: dist-${{ matrix.package }}
+          path: dist/
+
+      - name: Publish ${{ matrix.package }} to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
