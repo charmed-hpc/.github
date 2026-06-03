@@ -8,10 +8,10 @@ __Automate the deployment and management of your supercomputing clusters 🚀__
 
 </div>
 
-## 🔬 What we do 
+## 🔬 What we do
 
-We are the Ubuntu High-Performance Computing Community! Together, we work on Charmed HPC, an approachable high-performance computing platform that manages the set up and 
-maintenance of HPC clusters for you. Charmed HPC handles common cluster operations by automating the deployment, 
+We are the Ubuntu High-Performance Computing Community! Together, we work on Charmed HPC, an approachable high-performance computing platform that manages the set up and
+maintenance of HPC clusters for you. Charmed HPC handles common cluster operations by automating the deployment,
 integration, and life-cycle management of essential HPC software. It also automatically configures GPUs, high bandwidth networking, and shared storage.
 
 ## 🤝 Be part of the Ubuntu HPC Community
@@ -19,7 +19,7 @@ integration, and life-cycle management of essential HPC software. It also automa
 ### Communication
 
 * Chat with us on [Matrix](https://matrix.to/#/#hpc:ubuntu.com).
-* Come to our [weekly community call](https://meet.jit.si/Ubuntu-HPC&sa=D&source=calendar&ust=1750641827322789&usg=AOvVaw2czyrm-Ywrc9xBB7xB4tvJ) - every Wednesday at 16:30 UTC.
+* Come to our [weekly community call](https://meet.jit.si/Ubuntu-HPC) - every Wednesday at 16:30 UTC.
 * Start a discussion on [GitHub Discussions](https://github.com/orgs/charmed-hpc/discussions).
 
 ### Contributing
@@ -28,7 +28,7 @@ Interested in making code contributions to Charmed HPC? Here are some general gu
 
 1. All contributions must pass all CI tests. Charmed HPC is a busy, active project, so we typically won't review pull requests until they pass all the CI tests.
 2. Use [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/).
-3. Start a discussion with the project maintainers before embarking on any major pull requests such as introducting major features, adding new dependencies, or refactoring existing behaviour. 
+3. Start a discussion with the project maintainers before embarking on any major pull requests such as introducting major features, adding new dependencies, or refactoring existing behaviour.
 
 For further details about contributing to Charmed HPC, see the [main CONTRIBUTING.md guide](https://github.com/charmed-hpc/.github/blob/main/CONTRIBUTING.md) for more in-depth information regarding code guidelines, opening issues or discussions, and creating pull requests. Each repository also has their own specific CONTRIBUTING.md guide that should be consulted well before opening a pull request.
 
@@ -61,7 +61,7 @@ Support is provided on a best-effort basis; we are all busy people! The General 
 
 ### Where should I go if I want to report an issue/bug?
 
-Send a message to the General room on the [#hpc:ubuntu.com](https://matrix.to/#/#hpc:ubuntu.com) Matrix. The team can help you triage the issue and point you to the correct project to raise a bug report against. Please make sure to also review the [Bug Reports](https://github.com/charmed-hpc/.github/blob/main/CONTRIBUTING.md#bug-reports) section of the CONTRIBUTING.md guide. 
+Send a message to the General room on the [#hpc:ubuntu.com](https://matrix.to/#/#hpc:ubuntu.com) Matrix. The team can help you triage the issue and point you to the correct project to raise a bug report against. Please make sure to also review the [Bug Reports](https://github.com/charmed-hpc/.github/blob/main/CONTRIBUTING.md#bug-reports) section of the CONTRIBUTING.md guide.
 
 ### What if I am doing something interesting in HPC and want to share it with the Ubuntu HPC community?
 
