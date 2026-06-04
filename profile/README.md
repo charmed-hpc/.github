@@ -10,7 +10,7 @@ __Automate the deployment and management of your supercomputing clusters 🚀__
 
 ## 🔬 What we do
 
-We are the Ubuntu High-Performance Computing Community! Together, we work on Charmed HPC, an approachable high-performance computing platform that manages the set up and
+We are the Ubuntu High-Performance Computing Community! Together, we work on Charmed HPC, an approachable high-performance computing platform that manages the set-up and
 maintenance of HPC clusters for you. Charmed HPC handles common cluster operations by automating the deployment,
 integration, and life-cycle management of essential HPC software. It also automatically configures GPUs, high bandwidth networking, and shared storage.
 
@@ -28,21 +28,21 @@ Interested in making code contributions to Charmed HPC? Here are some general gu
 
 1. All contributions must pass all CI tests. Charmed HPC is a busy, active project, so we typically won't review pull requests until they pass all the CI tests.
 2. Use [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/).
-3. Start a discussion with the project maintainers before embarking on any major pull requests such as introducting major features, adding new dependencies, or refactoring existing behaviour.
+3. Start a discussion with the project maintainers before embarking on any major pull requests such as introducing major features, adding new dependencies, or refactoring existing behavior.
 
 For further details about contributing to Charmed HPC, see the [main CONTRIBUTING.md guide](https://github.com/charmed-hpc/.github/blob/main/CONTRIBUTING.md) for more in-depth information regarding code guidelines, opening issues or discussions, and creating pull requests. Each repository also has their own specific CONTRIBUTING.md guide that should be consulted well before opening a pull request.
 
 ### Documentation
 
-See the [Charmed HPC project documentation site](https://documentation.ubuntu.com/charmed-hpc/latest/) for general user guidance on how to build and use Charmed HPC. For documenatation contributions, see the [`docs`](https://github.com/charmed-hpc/docs) repository's [CONTRIBUTING.md](https://github.com/charmed-hpc/docs/blob/main/CONTRIBUTING.md) guidelines.
+See the [Charmed HPC project documentation site](https://documentation.ubuntu.com/charmed-hpc/latest/) for general user guidance on how to build and use Charmed HPC. For documentation contributions, see the [`docs`](https://github.com/charmed-hpc/docs) repository's [CONTRIBUTING.md](https://github.com/charmed-hpc/docs/blob/main/CONTRIBUTING.md) guidelines.
 
 ## ❓ FAQ
 
-### Can I contribute to Charmed HPC even if I do not feel like I am an HPC expert or I have no idea what the Ubuntu HPC community does?
+### Can I contribute to Charmed HPC even if I do not feel like I am an HPC expert, or I have no idea what the Ubuntu HPC community does?
 
 Absolutely! Anyone can contribute to Charmed HPC! All we ask is that you first review the [contributing section](#contributing) of this README before starting work on your first contribution.
 
-Do you have no idea what HPC is or you are looking to learn more about what we do? Check out these awesome blog posts here!
+Do you have no idea what HPC is, or you are looking to learn more about what we do? Check out these awesome blog posts here!
 
 - [What is High-Performance Computing?](https://ubuntu.com/blog/what-is-high-performance-computing-hpc-part-1)
 - [Where are High-Performance Computing clusters used?](https://ubuntu.com/blog/high-performance-computing-hpc-anywhere-part-2)
