@@ -45,6 +45,9 @@ jobs:
         with:
           target-branch: ${{ matrix.target }}
           pull-request: ${{ github.event.pull_request.url }}
-          auth: ${{ secrets.GITHUB_TOKEN }}
+          git-user: "ubuntu-hpc-bot"
+          git-email: "hpc-ubuntu-group@canonical.com"
+          # Must pass `secrets: inherit` when reusing this workflow.
+          auth: ${{ secrets.UBUNTU_HPC_BOT_BACKPORT_PAT }}
           enable-err-notification: true
           auto-no-squash: true
