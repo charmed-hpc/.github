@@ -36,7 +36,7 @@ For further details about contributing to Charmed HPC, see the [main CONTRIBUTIN
 
 ### Documentation
 
-See the [Charmed HPC project documentation site](https://ubuntu.com/hpc/docs/latest/) for general user guidance on how to build and use Charmed HPC. For documentation contributions, see the [`docs`](https://github.com/canonical/charmed-hpc-docs) repository's [CONTRIBUTING.md](https://github.com/canonical/charmed-hpc-docs/blob/main/CONTRIBUTING.md) guidelines.
+See the [Charmed HPC project documentation site](https://ubuntu.com/hpc/docs/latest/) for general user guidance on how to build and use Charmed HPC. For documentation contributions, see the [`charmed-hpc-docs`](https://github.com/canonical/charmed-hpc-docs) repository's [CONTRIBUTING.md](https://github.com/canonical/charmed-hpc-docs/blob/main/CONTRIBUTING.md) guidelines.
 
 ## ❓ FAQ
 
